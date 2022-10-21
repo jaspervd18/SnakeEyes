@@ -14,7 +14,13 @@
         <li>@score</li>
     }
 </ul>
+@if (_game.HasSnakeEyes)
+{
+    <div class="alert alert-danger">Oeps you did it again!</div>
+    <button @onclick="_game.Restart">Restart</button>
+}
 
 @code {
     private Game _game = new Game();
 }
+
