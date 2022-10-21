@@ -15,4 +15,4 @@ public class Dice
     {
         Dots = _randomizer.Next(1, 7);
     }
-}
+}   
