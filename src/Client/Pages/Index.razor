@@ -7,6 +7,13 @@
 </div>
 <p>Score: @_game.Total</p>
 <button @onclick="_game.Play">Play</button>
+<h3>Highscores</h3>
+<ul>
+    @foreach (var score in _game.HighScores.OrderByDescending(x => x))
+    {
+        <li>@score</li>
+    }
+</ul>
 
 @code {
     private Game _game = new Game();

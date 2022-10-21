@@ -5,8 +5,8 @@ public class Game
 
     public int Eye1 { get => _dice1.Dots; }
     public int Eye2 { get => _dice2.Dots; }
-    public bool HasSnakeEyes => Eye1 == 1 && Eye2 == 2;
-    public IReadOnlyList<int> HighScores { get; }
+    public bool HasSnakeEyes => Eye1 == 1 && Eye2 == 1;
+    public IReadOnlyList<int> HighScores => _highscores.AsReadOnly();
     public int Total { get; private set; }
 
     private Dice _dice1;
